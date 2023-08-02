@@ -12,12 +12,16 @@ const GeneralInformation = () => {
   const [armorClass, setArmorClass] = useState('');
   const [speed, setSpeed] = useState('');
 
+  const estilos ={
+    text: tw`text-lg mb-1 text-red-500`,
+  }
+
   return (
     <View style={tw`flex-1 p-4 bg-white`}>
       <Text style={tw`text-2xl font-bold mb-4 text-red-500`}>Hoja de Personaje</Text>
       <View style={tw`flex-row mb-4`}>
         <View style={tw`flex-1 mr-2`}>
-          <Text style={tw`text-lg mb-1 text-red-500`}>Nombre</Text>
+          <Text style={estilos.text}>Nombre</Text>
           <TextInput
             style={tw`border border-red-500 rounded px-2 text-lg h-10`}
             value={name}
@@ -26,7 +30,7 @@ const GeneralInformation = () => {
           />
         </View>
         <View style={tw`flex-1 ml-2`}>
-          <Text style={tw`text-lg mb-1 text-red-500`}>Raza</Text>
+          <Text style={estilos.text}>Raza</Text>
           <TextInput
             style={tw`border border-red-500 rounded px-2 text-lg h-10`}
             value={race}
@@ -37,7 +41,7 @@ const GeneralInformation = () => {
       </View>
       <View style={tw`flex-row mb-4`}>
         <View style={tw`flex-1 mr-2`}>
-          <Text style={tw`text-lg mb-1 text-red-500`}>Clase</Text>
+          <Text style={estilos.text}>Clase</Text>
           <TextInput
             style={tw`border border-red-500 rounded px-2 text-lg h-10`}
             value={classCharacter}
@@ -46,7 +50,7 @@ const GeneralInformation = () => {
           />
         </View>
         <View style={tw`flex-1 ml-2`}>
-          <Text style={tw`text-lg mb-1 text-red-500`}>Nivel</Text>
+          <Text style={estilos.text}>Nivel</Text>
           <TextInput
             style={tw`border border-red-500 rounded px-2 text-lg h-10`}
             value={level}
@@ -58,7 +62,7 @@ const GeneralInformation = () => {
       </View>
       <View style={tw`flex-row mb-4`}>
         <View style={tw`flex-1 mr-2`}>
-          <Text style={tw`text-lg mb-1 text-red-500`}>Puntos de Experiencia</Text>
+          <Text style={estilos.text}>Puntos de Experiencia</Text>
           <TextInput
             style={tw`border border-red-500 rounded px-2 text-lg h-10`}
             value={experiencePoints}
@@ -68,7 +72,7 @@ const GeneralInformation = () => {
           />
         </View>
         <View style={tw`flex-1 ml-2`}>
-          <Text style={tw`text-lg mb-1 text-red-500`}>Puntos de Golpe</Text>
+          <Text style={estilos.text}>Puntos de Golpe</Text>
           <TextInput
             style={tw`border border-red-500 rounded px-2 text-lg h-10`}
             value={hitPoints}
@@ -80,7 +84,7 @@ const GeneralInformation = () => {
       </View>
       <View style={tw`flex-row`}>
         <View style={tw`flex-1 mr-2`}>
-          <Text style={tw`text-lg mb-1 text-red-500`}>Clase de Armadura</Text>
+          <Text style={estilos.text}>Clase de Armadura</Text>
           <TextInput
             style={tw`border border-red-500 rounded px-2 text-lg h-10`}
             value={armorClass}
@@ -90,7 +94,7 @@ const GeneralInformation = () => {
           />
         </View>
         <View style={tw`flex-1 ml-2`}>
-          <Text style={tw`text-lg mb-1 text-red-500`}>Velocidad</Text>
+          <Text style={estilos.text}>Velocidad</Text>
           <TextInput
             style={tw`border border-red-500 rounded px-2 text-lg h-10`}
             value={speed}
