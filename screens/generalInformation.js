@@ -3,8 +3,8 @@ import { View, Text, TextInput, Image } from 'react-native';
 import tw from 'twrnc';
 
 const estilos = {
-  text: tw`text-lg mb-1 text-red-500`,
-  singleLineText: tw`flex-wrap: nowrap`,
+  text: tw`text-lg mb-1 text-red-500 break-keep`,
+  singleLineText: tw`flex-wrap: nowrap whitespace-nowrap break-keep`,
 };
 
 const smallInputStyle = {
@@ -34,6 +34,7 @@ const GeneralInformation = () => {
     <View style={tw`flex-1 p-4 padding bg-white`}>
 
       <Text style={tw`text-2xl font-bold mb-4 text-red-500`}>Hoja de Personaje</Text>
+      {/* // Nombre y foto */}
       <View style={tw`flex-row mb-4`}>
         <View style={tw`flex-1 mr-4`}>
           <Image
@@ -48,7 +49,7 @@ const GeneralInformation = () => {
             placeholder="Nombre del personaje"
           />
         </View>
-
+    {/* // Textos largos */}
         <View>
         <View style={tw`flex-1 flex-row`}>
           <View style={tw`mb-2`}>
@@ -88,9 +89,10 @@ const GeneralInformation = () => {
             />
           </View>
         </View>
+        {/* //Valores Numericos */}
         <View style={tw`flex-1 flex-row`}>
-          <View style={tw`flex-row mb-2`}>
-            <View style={tw`flex-1 mr-2`}>
+          <View style={tw`flex-row`}>
+            <View style={tw`flex-1 items-center`}>
               <Text style={estilos.text}>Nivel</Text>
               <TextInput
                 style={[tw`border border-red-500 rounded px-1 w-2.5 text-lg h-10`, smallInputStyle]}
@@ -101,7 +103,7 @@ const GeneralInformation = () => {
                 maxLength={3} 
               />
             </View>
-            <View style={tw`flex-1 ml-2`}>
+            <View style={tw`flex-1 items-center w-72`}>
               <Text style={[estilos.text, estilos.singleLineText]}>Puntos de Experiencia</Text>
               <TextInput
                 style={[tw`border border-red-500 rounded px-2 text-lg h-10`, smallInputStyle]}
@@ -114,7 +116,7 @@ const GeneralInformation = () => {
             </View>
           </View>
           <View style={tw`flex-row mb-2`}>
-            <View style={tw`flex-1 mr-2`}>
+            <View style={tw`flex-1 items-center mr-2`}>
               <Text style={estilos.text}>Puntos de Golpe</Text>
               <TextInput
                 style={[tw`border border-red-500 rounded px-2 text-lg h-10`, smallInputStyle]}
@@ -125,7 +127,7 @@ const GeneralInformation = () => {
                 maxLength={3} 
               />
             </View>
-            <View style={tw`flex-1 ml-2`}>
+            <View style={tw`flex-1 ml-2 items-center w-72`}>
               <Text style={[estilos.text, estilos.singleLineText]}>Clase de Armadura</Text>
               <TextInput
                 style={[tw`border border-red-500 rounded px-2 text-lg h-10`, smallInputStyle]}
@@ -138,7 +140,7 @@ const GeneralInformation = () => {
             </View>
           </View>
           <View style={tw`flex-row mb-2`}>
-            <View style={tw`flex-1 mr-2`}>
+            <View style={tw`flex-1 items-center mr-2`}>
               <Text style={estilos.text}>Velocidad</Text>
               <TextInput
                 style={[tw`border border-red-500 rounded px-2 text-lg h-10`, smallInputStyle]}
@@ -149,7 +151,7 @@ const GeneralInformation = () => {
                 maxLength={3} 
               />
             </View>
-            <View style={tw`flex-1 ml-2`}>
+            <View style={tw`flex-1 items-center ml-2 w-72`}>
               <Text style={[estilos.text, estilos.singleLineText]}>Daño Recibido</Text>
               <TextInput
                 style={[tw`border border-red-500 rounded px-2 text-lg h-10`, smallInputStyle]}
